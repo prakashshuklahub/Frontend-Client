@@ -1,0 +1,21 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+@use "../../../styles/mixins" as *;
+
+.container {
+  @include flex-center;
+  gap: $spacing-lg;
+  align-self: center;
+  background: linear-gradient(135deg, $color-gray-100 0%, $color-gray-200 100%);
+  padding: $spacing-lg $spacing-lg;
+  text-align: center;
+  border-bottom: 1px solid $color-border;
+  width: 100%;
+  padding: $spacing-lg 20%;
+
+  @include mobile {
+    @include flex-column;
+    padding: $spacing-lg 10%;
+    gap: $spacing-md;
+  }
+}

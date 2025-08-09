@@ -1,0 +1,25 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+
+.dateFilter {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  flex: 1;
+
+  .select {
+    padding: $spacing-sm $spacing-2xl $spacing-sm $spacing-lg;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-md;
+    font-size: $font-size-sm;
+    outline: none;
+    cursor: pointer;
+    background: $color-white;
+    box-sizing: border-box;
+    height: 2.75rem;
+
+    &:focus {
+      border-color: $color-primary;
+    }
+  }
+}

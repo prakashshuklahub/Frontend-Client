@@ -1,0 +1,49 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+@use "../../../styles/mixins" as *;
+
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  padding: $spacing-lg 0;
+  border-top: 0.0625rem solid $color-gray-700;
+  width: 100%;
+  @include flex-center;
+
+  .container {
+    padding: 0 $spacing-3xl;
+    gap: $spacing-xl;
+    width: 100%;
+
+    @include flex-between;
+
+    @include mobile {
+      padding: 0 $spacing-xl;
+      @include flex-column;
+      gap: $spacing-md;
+      text-align: center;
+    }
+
+    .copyright {
+      font-size: $font-size-xl;
+      opacity: 0.9;
+      font-weight: $font-weight-normal;
+
+      @include mobile {
+        font-size: $font-size-base;
+        text-align: center;
+      }
+    }
+
+    .rightContent {
+      font-size: $font-size-xl;
+      opacity: 0.9;
+      font-weight: $font-weight-normal;
+
+      @include mobile {
+        font-size: $font-size-base;
+        text-align: center;
+      }
+    }
+  }
+}

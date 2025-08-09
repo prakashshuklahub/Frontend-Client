@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Frontend Client
 
-## Getting Started
+A minimal Next.js app for searching and displaying images from a media service.
 
-First, run the development server:
+### Quick start
 
 ```bash
+# Install deps
+npm install
+
+# Run dev server (http://localhost:3000)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- API base URL defaults to the hosted service:
+  - `https://media-service-9v3w.onrender.com/api`
+- To override, create `.env.local` in project root:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+NEXT_PUBLIC_API_URL=https://your-api.example.com/api
+```
 
-## Learn More
+### API used by the app
 
-To learn more about Next.js, take a look at the following resources:
+- Endpoint: `GET /media/search`
+- Query params:
+  - `q` (string): search text
+  - `limit` (number): page size (default 30 in app)
+  - `offset` (number): pagination offset
+  - `dateFrom` (YYYY-MM-DD)
+  - `dateTo` (YYYY-MM-DD)
+  - `photographer` (string, optional)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example request:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+curl "https://media-service-9v3w.onrender.com/api/media/search?q=cricket&limit=30&offset=0"
+```
 
-## Deploy on Vercel
+### Images configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Remote images are allowed from `www.imago-images.de` (see `next.config.ts`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tech stack
+
+- Next.js (App Router)
+- TypeScript
+- React Query (@tanstack/react-query)
+- SCSS Modules (BEM naming)
+
+### Scripts
+
+- `npm run dev`: start dev server
+- `npm run build`: build production bundle
+- `npm run start`: run production server

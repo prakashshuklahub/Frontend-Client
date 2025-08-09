@@ -1,0 +1,74 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+@use "../../../styles/mixins" as *;
+
+.container {
+  padding: 1.25rem 3.125rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  @include mobile {
+    padding: 0 1.25rem;
+  }
+
+  @include mobile-small {
+    padding: 0 1rem;
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 25rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  color: $color-gray-400;
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-gray-800;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  color: $color-gray-600;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $spacing-xl;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  @media (max-width: 75rem) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  @include mobile-small {
+    grid-template-columns: repeat(1 1fr);
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+@use "../../../styles/mixins" as *;
+
+.searchForm {
+  display: flex;
+  gap: $spacing-sm;
+  align-items: center;
+  flex: 2 1 auto;
+  height: 2.75rem;
+}
+
+.searchInput {
+  flex: 2 1 auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+  font-size: $font-size-sm;
+  outline: none;
+  height: 2.75rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+.searchButton {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.25rem;
+  background: $color-secondary;
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  white-space: nowrap;
+  height: 2.75rem;
+  box-sizing: border-box;
+
+  &:hover {
+    background: $color-gray-800;
+  }
+}

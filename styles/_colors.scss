@@ -1,0 +1,28 @@
+// Color Variables
+$color-black: #000;
+$color-white: #fff;
+$color-gray-100: #f8f8f8;
+$color-gray-200: #f8f9fa;
+$color-gray-300: #dee2e6;
+$color-gray-400: #adb5bd;
+$color-gray-500: #6c757d;
+$color-gray-600: #6b7280;
+$color-gray-700: #495057;
+$color-gray-800: #374151;
+$color-gray-900: #333;
+$color-gray-950: #1f2937;
+
+// Semantic Colors
+$color-primary: $color-black;
+$color-secondary: $color-gray-900;
+$color-background: $color-gray-100;
+$color-border: $color-gray-300;
+$color-text-primary: $color-gray-800;
+$color-text-secondary: $color-gray-600;
+$color-text-muted: $color-gray-500;
+
+// Shadow Colors
+$shadow-color-primary: rgba(0, 0, 0, 0.25);
+$shadow-color-secondary: rgba(0, 0, 0, 0.15);
+$shadow-color-hover-primary: rgba(0, 0, 0, 0.35);
+$shadow-color-hover-secondary: rgba(0, 0, 0, 0.25);

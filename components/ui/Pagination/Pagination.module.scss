@@ -1,0 +1,59 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  padding: $spacing-lg 0;
+  margin-top: auto;
+
+  .paginationButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+      display: flex;
+      justify-content: center;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      margin: 0 $spacing-sm;
+    }
+
+    .buttonText {
+      font-weight: $font-weight-medium;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.pageInfo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-gray-100;
+  border-radius: $border-radius-md;
+  border: 1px solid $color-border;
+}
+
+.currentPage {
+  font-weight: $font-weight-bold;
+  color: $color-gray-950;
+  font-size: $font-size-lg;
+}
+
+.pageSeparator {
+  color: $color-text-secondary;
+  font-weight: $font-weight-normal;
+}
+
+.totalPages {
+  color: $color-text-primary;
+  font-weight: $font-weight-semibold;
+}

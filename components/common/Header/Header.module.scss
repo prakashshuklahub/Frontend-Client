@@ -1,0 +1,19 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/base" as *;
+@use "../../../styles/mixins" as *;
+
+.header {
+  @include flex-between;
+  border-bottom: 0.0625rem solid $color-gray-300;
+  padding: $spacing-lg $spacing-xl;
+}
+
+.rightSection {
+  @include flex-center;
+  gap: $spacing-md;
+}
+
+.cart {
+  background-color: transparent;
+  border: none;
+}
