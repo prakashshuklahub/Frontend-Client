@@ -42,7 +42,6 @@ describe("ImageGrid", () => {
   });
 
   it("shows error state when isError", () => {
-    // Provide a non-empty images array so the error branch is reached
     render(<ImageGrid images={[makeImage("1")]} isError />);
     expect(screen.getByText(/error loading images/i)).toBeInTheDocument();
   });
