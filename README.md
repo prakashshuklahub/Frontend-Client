@@ -1,6 +1,6 @@
 ### Frontend Client
 
-A minimal Next.js app for searching and displaying images from a media service.
+A Next.js app for searching and displaying images from a media service.
 
 ### Quick start
 
@@ -22,11 +22,6 @@ npm run start
 
 - API base URL defaults to the hosted service:
   - `https://media-service-9v3w.onrender.com/api`
-- To override, create `.env.local` in project root:
-
-```bash
-NEXT_PUBLIC_API_URL=https://your-api.example.com/api
-```
 
 ### API used by the app
 

@@ -10,11 +10,11 @@
   min-height: 0;
 
   @include mobile {
-    padding: 0 1.25rem;
+    padding: 2rem 1.25rem;
   }
 
   @include mobile-small {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
 }
 
