@@ -105,11 +105,12 @@ Relying solely on `subctext` is inaccurate due to missing keywords/tags.
 
 ## Additional Enhancements (Future Scope)
 
-- Playwright E2E testing for search & filter
-- Mixpanel integration for analytics
-- Internationalization (i18n) support
-- Backend logging enhancements
-- Sentry integration for error monitoring
-- Swagger API documentation
-- Redis caching for faster repeated queries
-- Cursor-based pagination for more efficient and scalable data navigation, especially in search results
+- I can implement Playwright end-to-end testing for search and filter functionalities  
+- I can implement Mixpanel integration for user tracking and analytics  
+- I can implement internationalisation (i18n) support  
+- I can implement backend logging for APIs  
+- I can implement Sentry integration for error monitoring  
+- I can implement Swagger API documentation  
+- I can implement Redis caching for faster repeated queries  
+- I can implement cursor-based pagination for more efficient and scalable data navigation, especially in search results  
+
